@@ -1,18 +1,18 @@
 # CleanPc
-This script cleans Windows OS for junk files, temp files and makes more space for you by deleting these files.
+This script cleans Windows OS junk and temp files and makes more space for you by deleting these files.
 it also deletes the Recycle bin 🚮 in all disk drives.
 
 ![Made By](https://img.shields.io/badge/made%20by-ZakaryaBelamiri-%234d41c0)
 <br>
 
 ## What This Script Made For?
-- This code was created by [Belamiri Zakarya](https://github.com/kakaa2993) to  cleans Windows OS for junk files, temp files and makes more space for you by deleting these files, also deletes the Recycle bin 🚮 in all disk drives automatically without the user needing to do it manually.
+- This code was created by [Belamiri Zakarya](https://github.com/kakaa2993) to  clean Windows OS for junk files, and temp files and makes more space for you by deleting these files, also deletes the Recycle bin 🚮 in all disk drives automatically without the user needing to do it manually.
 - This script can work automatically with a double click.
 
 <br>
 
 ## The Requirement?
-- This script doesn't need any external libraries to run, it's just a batch file use the cmd command that's baked in CMD Windows.
+- This script doesn't need any external libraries to run, it's just a batch file using the cmd command that's baked in CMD Windows.
 
 <br>
 
@@ -33,8 +33,8 @@ schtasks /create /tn "Name_of_Task" /sc onlogon /ru SYSTEM /rl HIGHEST /tr "C:\p
 
 Explanation of the command:
 
-- `/sc onlogon`: Specifies that the task should run when any user logs on.
-- `/ru SYSTEM`: Specifies that the task should run under the `SYSTEM` account, which has administrative privileges.
+- `/sc onlogon`: the task should run when any user logs on.
+- `/ru SYSTEM`: The task should run under the `SYSTEM` account, which has administrative privileges.
 - `/rl HIGHEST`: Sets the privilege level to the highest available, effectively running the task as an administrator.
 - `/tr "C:\path\to\your\batch\script.bat"`: Specifies the path to the batch script that you want to run.
 
@@ -65,7 +65,7 @@ Here's a table summarizing the available options for the `schtasks /create` comm
 | `/triggers`      | Specifies one or more triggers for the task.                                                                |
 | `/xml`           | Specifies the XML file containing the task definition.                                                       |
 
-These are the main options available for the `schtasks /create` command. You can combine them to customize the task according to your requirements.
+These are the main options for the `schtasks /create` command. You can combine them to customize the task according to your requirements.
 
 <br>
 

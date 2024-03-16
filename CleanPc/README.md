@@ -25,10 +25,11 @@ and voila! That is all that you need.
 
 ## Can I Use The Script Automatically?
 You can make the script run automatically using ``Task Scheduler`` from Windows, here is a video showing you how you can use it manually [on YouTube](https://youtu.be/RSwOrK4m82U?si=PzW9tNA-4Gh97k0e).
-and you can also with ``cmd``:
--To create a task that runs a batch script "at log in" for any user and "as administrator" using the command line:
+
+Or you can also with ``cmd``:
+- To create a task that runs a batch script "at log in" for any user and "as administrator" using the command line:
 ```batch
-schtasks /create /tn "Name_of_Task" /sc onlogon /ru SYSTEM /rl HIGHEST /tr "C:\path\to\your\batch\script.bat"
+schtasks /create /tn "Name_of_Task" /sc onlogon /ru SYSTEM /rl HIGHEST /tr "C:\path\to\your\batch\Clean.bat"
 ```
 
 Explanation of the command:
@@ -36,9 +37,9 @@ Explanation of the command:
 - `/sc onlogon`: the task should run when any user logs on.
 - `/ru SYSTEM`: The task should run under the `SYSTEM` account, which has administrative privileges.
 - `/rl HIGHEST`: Sets the privilege level to the highest available, effectively running the task as an administrator.
-- `/tr "C:\path\to\your\batch\script.bat"`: Specifies the path to the batch script that you want to run.
+- `/tr "C:\path\to\your\batch\Clean.bat"`: Specifies the path to the batch script that you want to run.
 
-Replace `"Name_of_Task"` with the desired name for your task and `"C:\path\to\your\batch\script.bat"` with the actual path to your batch script.
+Replace `"Name_of_Task"` with the desired name for your task and `"C:\path\to\your\batch\Clean.bat"` with the actual path to your batch script.
 
 After running this command, the task will be created in Task Scheduler, and it will execute the specified batch script whenever any user logs on, running with administrative privileges.
 Here's a table summarizing the available options for the `schtasks /create` command in Windows:
